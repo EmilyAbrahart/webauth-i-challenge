@@ -13,9 +13,9 @@ server.use(helmet());
 server.use(express.json());
 server.use(session({
   name: 'sessionId', 
-  secret: 'keep it secret, keep it long', // we intend to encrypt
+  secret: 'this is very very secret, shhhh!', 
   cookie: {
-    maxAge: 1000 * 60 * 60,
+    maxAge: 1 * 24 * 60 * 60 * 1000,
     secure: false,
     httpOnly: true,
   },

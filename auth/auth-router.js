@@ -47,9 +47,9 @@ router.get('/logout', (req, res) => {
   if (req.session) {
     req.session.destroy(err => {
       if (err) {
-        res.send('you can never leave');
+        res.send('There was an error when logging out.');
       } else {
-        res.send('bye, thanks!');
+        res.send('You have been logged out.');
       }
     });
   } else {
